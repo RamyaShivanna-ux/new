@@ -15,9 +15,8 @@ pipeline {
  stage(‘Provision infrastructure’) {
   steps {
  sh ‘terraform init’
- sh ‘terraform plan -out=plan’
- // sh ‘terraform destroy -auto-approve’
- sh ‘terraform apply plan’
+ sh 'terraform plan'
+
  }
  }
  }
