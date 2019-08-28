@@ -3,22 +3,18 @@ pipeline {
  
  stages {
  stage(‘checkout’) {
- steps {
- git branch: ‘master’, url: ‘https://github.com/RamyaShivanna-ux/new.git’
+  steps {
+   cd /home/ec2-user/test
+ git  ‘https://github.com/RamyaShivanna-ux/new.git’
  
  }
  }
  stage(‘Set Terraform path’) {
  steps {
- script {
- def tfHome = tool name: ‘Terraform’
- env.PATH = “${tfHome}:${env.PATH}”
+  cd /home/ec2-user/
  }
- sh ‘terraform — version’
+ }
  
- 
- }
- }
  
  stage(‘Provision infrastructure’) {
  
