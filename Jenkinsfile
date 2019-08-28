@@ -3,7 +3,7 @@ pipeline {
   stages {
  stage(‘checkout’) {
   steps {
-  git 'https://github.com/RamyaShivanna-ux/new.git'
+  sh 'cd /home/'
  }
  }
  stage('testing') {
