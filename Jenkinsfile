@@ -3,7 +3,7 @@ pipeline {
   stages {
  stage(‘checkout’) {
   steps {
- sh 'sudo git clone https://github.com/RamyaShivanna-ux/new.git'
+  git 'https://github.com/RamyaShivanna-ux/new.git'
  }
  }
  stage('testing') {
