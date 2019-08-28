@@ -7,8 +7,7 @@ pipeline {
  sh 'sudo git clone https://github.com/RamyaShivanna-ux/new.git'
  }
  }
- 
- stage(‘Provision infrastructure’) {
+ stage('testing') {
   steps {
    sh 'sudo /home/ec2-user/test'
  sh ‘terraform init’
