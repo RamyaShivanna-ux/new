@@ -1,1 +1,2 @@
-check
+provider "aws" {
+  }
