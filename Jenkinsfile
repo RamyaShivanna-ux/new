@@ -10,8 +10,8 @@ pipeline {
  stage('testing') {
   steps {
    sh 'sudo /home/ec2-user/test'
- sh ‘terraform init’
- sh 'terraform plan'
+ sh ‘ sudo /home/ec2-user/test/terraform init’
+ sh 'sudo /home/ec2-user/test/terraform plan'
  }
  }
  }
